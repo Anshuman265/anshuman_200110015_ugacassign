@@ -13,43 +13,24 @@ session_start();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
 </head>
-<script>
-    //show and hide dropdown list item on button click  
-    function show_hide() {
-        var click = document.getElementById("list-items");
-        if (click.style.display === "none") {
-            click.style.display = "block";
-        } else {
-            click.style.display = "none";
-        }
-    }
-</script>
 
 <body>
     <div class="load"></div>
 
     <!--Navbar-->
-
-
     <nav class="navbar navbar-dark  " style="background-color: #1B2D48;">
         <div class="container">
             <!-- Navbar brand -->
             <a class="navbar-brand" href="home.php">Home</a>
             <ul class="navbar-nav ml-auto" id="list-items" style="margin-right: 10px" ;>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php echo $_SESSION['username']; ?>
+                <li class="nav-item">
+                    <a class="nav-link " href="home.php" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                       Hey <?php echo $_SESSION['username']; ?> !
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 </li>
             </ul>
             <!-- Collapse button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"><span class="navbar-toggler-icon"></span></button>
 
             <!-- Collapsible content -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent15">
@@ -95,7 +76,6 @@ session_start();
             $(".load").fadeOut(5000);;
         });
     </script>
-
 </body>
 
 
