@@ -1,7 +1,7 @@
 --------------------------------------Built using  Python & SQLite ------------------------------------------
                                                                                                              
 Tutorial Video-                                                                                              
--Python and SQL /freeCodeCamp - https://www.youtube.com/watch?v=byHcYRpMgI4
+-Python and SQL /freeCodeCamp - https://www.youtube.com/watch?v=byHcYRpMgI4 <br />
 -Stdiomask library used to mask the password -
 -stdiomask library - https://pypi.org/project/stdiomask/
 -Database screenshot taken using DB browser for SQLite
