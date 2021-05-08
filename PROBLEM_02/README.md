@@ -1,5 +1,5 @@
 -------------------------------------------- Angular App --------------------------------------------------
-# App is being hosted on - <br />
+# App is being hosted on - 
 ## https://data-table-9beb5.web.app/  <br />
 ### Tutorial used to learn Angular - <br />
 Angular tutorial for beginners/Academind - https://www.youtube.com/watch?v=htPYk6QxacQ <br />
