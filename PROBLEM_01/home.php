@@ -24,7 +24,7 @@ session_start();
             <a class="navbar-brand" href="home.php">Home</a>
             <ul class="navbar-nav ml-auto" id="list-items" style="margin-right: 10px" ;>
                 <li class="nav-item">
-                    <a class="nav-link " href="home.php" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                    <a class="nav-link " href="home.php" id="navbarDropdown" role="button">
                        Hey <?php echo $_SESSION['username']; ?> !
                     </a>
                 </li>
