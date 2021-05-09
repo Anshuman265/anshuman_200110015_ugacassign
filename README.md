@@ -9,5 +9,5 @@
 **All the script files have been commented throughout for a better understanding of the code** <br />
 
 
-All the resources that have been used are placed in the README.md file of the respective directiories.
+All the resources that have been used, their links are placed in the README.md file of the respective directiories.
 -------------------------------------------------------------------------------------------------------------------
