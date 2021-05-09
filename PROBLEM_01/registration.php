@@ -1,19 +1,32 @@
 <?php
+//PHP script begins here
+//Session starts here
 session_start();
+//Establishing connection to our database
+//Here 'root' is the default username in php and the password is blank i.e and empty string ''
 $con = mysqli_connect('localhost','root','');
+//Selecting the database that is used to store username and password
 mysqli_select_db($con,'userreg');
+//Binding the data input
 $name = $_POST['name'];
 $pass = $_POST['password'];
+//Creating a query to check if any record exists with the entered username and password
 $query = "select * from users where name = '$name'";
+//Running the query and checking whether there exists a record of the user
+//Here result is the table containing the matching records
 $result = mysqli_query($con,$query);
+//Here count is the number of rows in the result table
 $count = mysqli_num_rows($result);
+//If there already exists a user the count will be equal to 1 , then echoing that the username is taken
 if($count == 1){
-    echo "This username has already been taken!";
+    echo "<center> <h1>This username has already been taken!</h1></center> ";
 }
+//No record exists means that user is new 
 else{
     $reg = "insert into users(name,password) VALUES ('$name','$pass') ";
     mysqli_query($con,$reg);
 }
+//End of the PHP script
 ?>
 <!doctype html>
 <html lang="en" style=" background: url(success.jpg) no-repeat center center fixed; 
@@ -34,15 +47,19 @@ else{
 
 <body style="background-color:transparent">
     <div class="container text-center" style="padding-top: 90px;">
+        <!--Adding the jumbotron-->
         <div class="jumbotron" style="padding-top :10px;border-radius: 10%;background: rgba(204, 204, 204, 0.5)">
+            <!--Heading of the jumbotron -->
             <h1 class="display-4 " style="color: white;">Regsitration Successful!</h1>
             <p class="lead ">We are excited to have you on-board!</p>
             <hr class="my-4 " style="background-color: wheat;">
+            <!--Display of username and password -->
             <p> Your username is 
                 <b><?php echo $_POST['name']; ?></b> 
                
                 <br> Your password is <b> <?php echo $_POST['password']; ?></b>
             </p>
+            <!--Adding link to go back to the login page-->
             <p class="lead">
                 <a class="btn btn-success btn-lg " href="index.html" role="button" style="margin-top:30px;">Go back to Login page</a>
             </p>

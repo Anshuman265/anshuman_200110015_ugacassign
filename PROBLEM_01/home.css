@@ -1,29 +1,8 @@
     .navbar-toggler-icon {
         background-image: url('ham.svg') !important;
+        /* !important is used for overriding*/
     }
-    
-    .loader {
-        border: 16px solid #f3f3f3;
-        /* Light grey */
-        border-top: 16px solid #3498db;
-        /* Blue */
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin 2s linear infinite;
-    }
-    
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-    /* Paste this css to your style sheet file or under head tag */
-    /* This only works with JavaScript, 
-if it's not present, don't show loader */
+    /*If the loader is not present then don't show the loader*/
     
     .no-js #loader {
         display: none;
@@ -43,7 +22,7 @@ if it's not present, don't show loader */
         width: 100%;
         height: 100%;
         z-index: 9999;
-        /* GIF has been taken from giphy*/
+        /* GIF has been taken from giphy.com*/
         background: url(l6.gif) center no-repeat #fff;
     }
     

@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Login </title>
+    <title>Error</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -14,9 +15,20 @@
 
 <body>
     <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30 text-center" style="margin: 0;">
-            <h1 class="display-4">Failed!</h1>
+        <!--The Message Box-->
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30 text-center" style="margin: 0;border-radius:10%;">
+            <!--Login failed alert!-->
+            <h1 class="alert alert-danger">Login Failed!</h1> <br>
+            <em>
+            <h4>Check your credentials!</h4>
+            </em>
+            <!--Centering the button relative to the container-->
+            <div class="text-center">
+                <a class="btn btn-outline-info" href="register.html" role="button" style="margin-top: 25px;">Don't have an account? Register Here</a>
+                <a class="btn btn-outline-primary" href="index.html" role="button" style="margin-top: 25px;">Back to the Sign-in page</a>
+            </div>
         </div>
+        <!--Message Box ends here-->
 
     </div>
 </body>

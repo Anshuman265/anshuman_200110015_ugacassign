@@ -1,4 +1,5 @@
 <?php
+//Session_start for retreiving the username 
 session_start();
 ?>
 
@@ -24,8 +25,8 @@ session_start();
             <a class="navbar-brand" href="home.php">Home</a>
             <ul class="navbar-nav ml-auto" id="list-items" style="margin-right: 10px" ;>
                 <li class="nav-item">
-                    <a class="nav-link " href="home.php" id="navbarDropdown" role="button">
-                       Hey <?php echo $_SESSION['username']; ?> !
+                    <a class="nav-link " href="#" id="navbarDropdown" role="button">
+                        Hey <?php echo $_SESSION['username']; ?> !
                     </a>
                 </li>
             </ul>
@@ -53,6 +54,7 @@ session_start();
         </div>
     </nav>
     <!--navbar-->
+    <!--Welcome Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Welcome <b><?php echo $_SESSION['username']; ?></b></h1>
@@ -63,19 +65,37 @@ session_start();
             </p>
         </div>
     </div>
-        <!--Bootstrap Javascript-->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-        <!--Adding jquery for the loader-->
-        <script>
-            $(window).load(function() {
-                // Animate loader off screen
-                $(".load").fadeOut(5000);;
-            });
-        </script>
-    <!--Loader script ends here-->
+    <!--Welcome Jumbotron ends here -->
+    <!--Adding the Qoute card -->
+    <div class="container">
+        <div class="card border-dark">
+            <div class="card-header">
+                Here's a special quote for you, <em><?php echo $_SESSION['username']; ?></em> !
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0 text-center">
+                    <h4>You never know how strong you are,</h4> until being strong is your only choice ..
+                    <footer class="blockquote-footer"><cite title="Source Title">Bob Marley</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <!--Quote card ends here-->
+    <!--Bootstrapp Javascript-->
+    <!--The below script makes the hamburger icon work -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Adding link for jquery , it makes the loader possible -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!--Adding jquery for the loader-->
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".load").fadeOut(5000);;
+        });
+    </script>
 </body>
 </html>
